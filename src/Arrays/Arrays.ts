@@ -1,4 +1,3 @@
-//No exception handling
 export class MyArray<Type> {
   length: number = 0;
   private data: { [key: number]: Type } = {};
