@@ -3,7 +3,9 @@
       "module": "commonjs",
       "noImplicitAny": true,
       "removeComments": true,
-      "outDir": "dist"
+      "sourceMap" : true,
+      "outDir": "dist",
+      "target": "ES6"
     },
     "include": ["src/**/*"],
     "exclude": ["node_modules", "**/*.spec.ts"]

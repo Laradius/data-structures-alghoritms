@@ -1,0 +1,16 @@
+{
+	"tasks": [
+		{
+			"type": "typescript",
+			"tsconfig": "tsconfig.json",
+			"option": "watch",
+			"runtimeExecutable": "npx",
+			"problemMatcher": [
+				"$tsc-watch"
+			],
+			
+			"group": "build",
+			"label": "tsc: watch - tsconfig.json"
+		}
+	]
+}
