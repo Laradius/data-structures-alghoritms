@@ -1,12 +1,14 @@
-import { Stack } from "./Stack/StackArrayImplementation";
+import { Queue } from "./Queues/Queue";
 
-const myStack = new Stack<number>();
-myStack.push(1);
-myStack.push(2);
-myStack.push(3);
+const myQueue = new Queue<number>();
+myQueue.enqueue(1);
+myQueue.enqueue(2);
+myQueue.enqueue(3);
+myQueue.enqueue(4);
 
-console.log(myStack.peek());
-console.log(myStack.pop());
-console.log(myStack.pop());
-console.log(myStack.pop());
-console.log(myStack.pop());
+
+console.log(myQueue.peek());
+console.log(myQueue.dequeue());
+console.log(myQueue.dequeue());
+console.log(myQueue.dequeue());
+console.log(myQueue.dequeue());
