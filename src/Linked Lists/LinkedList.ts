@@ -43,6 +43,25 @@ export default class LinkedList<T> {
     this._length++;
   }
 
+  public reverse() : void {
+    if (!this._head.next) {
+      return;
+    }
+
+    let first = this._head;
+    this._tail = this._head;
+    let second = first.next;
+
+    while(second) {
+      const temp = second.next;
+      second.next = first;
+      first = second;
+      second = temp;
+    }
+    this._head.next = null;
+    this._head = first;
+  }
+
   public traverse(index: number) {
     let currentNode = this._head;
     for (let i = 0; i < index; i++) {

@@ -1,16 +1,9 @@
-import LinkedList from "./Linked Lists/LinkedList";
+import { Stack } from "./Stack/StackLinkedListImplementation";
 
-const linkedList = new LinkedList(1);
+const myStack = new Stack<number>();
+myStack.push(1);
+myStack.push(2);
+myStack.push(3);
 
-linkedList.append(2);
-linkedList.append(3);
-linkedList.append(4);
-linkedList.append(5);
-
-linkedList.prepend(0);
-
-console.log(linkedList);
-
-linkedList.insert(3, 99);
-
-linkedList.printList();
+console.log(myStack);
+myStack.push(3);
