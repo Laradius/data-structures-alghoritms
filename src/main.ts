@@ -1,23 +1,23 @@
-import { BinarySearchTree } from "./Trees/BinarySearchTree";
-import { Node } from "./Trees/BinarySearchTree";
+import { Graph } from './Graph/Graph';
 
-const tree = new BinarySearchTree();
-tree.insert(9)
-tree.insert(4)
-tree.insert(6)
-tree.insert(20)
-tree.insert(170)
-tree.insert(15)
-tree.insert(1)
-console.log(JSON.stringify(traverse(tree.root)))
 
-//     9
-//  4     20
-//1  6  15  170
+const myGraph = new Graph();
+myGraph.addVertex(0);
+myGraph.addVertex(1);
+myGraph.addVertex(2);
+myGraph.addVertex(3);
+myGraph.addVertex(4);
+myGraph.addVertex(5);
+myGraph.addVertex(6);
+myGraph.addEdge(3, 1); 
+myGraph.addEdge(3, 4); 
+myGraph.addEdge(4, 2); 
+myGraph.addEdge(4, 5); 
+myGraph.addEdge(1, 2); 
+myGraph.addEdge(1, 0); 
+myGraph.addEdge(0, 2); 
+myGraph.addEdge(6, 5);
 
-function traverse(node: Node) {
-  const tree = {left: node.left, right: node.right, value: node.value };
-  tree.left = node.left === null ? null : traverse(node.left);
-  tree.right = node.right === null ? null : traverse(node.right);
-  return tree;
-}
+myGraph.showConnections(); 
+
+export {}
